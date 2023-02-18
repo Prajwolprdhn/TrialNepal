@@ -4,7 +4,7 @@
 <section class="dashboard">
     @include('admin.layouts.top')
 
-    <form action="{{route('store')}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('asset_store')}}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="wrapper">
             <div class="title">
@@ -18,16 +18,14 @@
                     
                 <div class="inputfield">
                     <label>Asset Image</label>
-                    <input type="file" id="actual-btn" hidden>
-                    <label class="imp" for="actual-btn">Select Image</label>
+                    <input type="file" name="asset_img" id="actual-btn" >
+                    {{-- <label class="imp" for="actual-btn">Select Image</label> --}}
                 </div> 
                 <div class="inputfield">
                     <input type="submit" class="btn1" value="Submit">
                     <a href="{{route('asset')}}">Cancel</a>
                 </div>
                     
-                
-                
             </div>
         </div>	
     </form>

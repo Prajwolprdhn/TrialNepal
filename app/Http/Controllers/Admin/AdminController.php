@@ -16,12 +16,6 @@ class AdminController extends Controller
     public function form(){
         return view('admin.layouts.form');
     }
-    public function asset(){
-        return view('admin.layouts.asset');
-    }
-    public function asset_form(){
-        return view('admin.layouts.asset_form');
-    }
     public function index(){
         $users = DB::select('select * from users');
         return view('admin.layouts.form',['users'=>$users]);

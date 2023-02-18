@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Owner\OwnerController;
 use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\AssetsController;
 
 
 //Admin
@@ -16,8 +17,10 @@ Route::middleware(['isAdmin'])->group(function () {
     Route::get('owner_detail',[AdminController::class,'owner_detail'])->name('owner_detail')->middleware('auth');
     Route::get('user_detail',[AdminController::class,'user_detail'])->name('user_detail')->middleware('auth');
 
-    Route::get('asset',[AdminController::class,'asset'])->name('asset')->middleware('auth');
-    Route::get('asset_form',[AdminController::class,'asset_form'])->name('asset_form')->middleware('auth');
+    //assets
+    Route::get('asset',[AssetsController::class,'asset'])->name('asset')->middleware('auth');
+    Route::get('asset_form',[AssetsController::class,'asset_form'])->name('asset_form')->middleware('auth');
+    Route::post('asset_store',[AssetsController::class,'asset_store'])->name('asset_store')->middleware('auth');
     
 
     //Create user
