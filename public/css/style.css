@@ -403,28 +403,28 @@ nav.close ~ .dashboard .top {
 } */
 
 /* User management form */
-.dash-content .activity .headlings {
+.headlings {
     margin-bottom: 20px;
 }
 
-.dash-content .activity .headlings a {
+.headlings a {
     text-decoration: none;
     font-weight: 500;
     padding: 10px;
     color: #000;
     text-align: center;
 }
-.activity .headlings a:hover {
+.headlings a:hover {
     border-bottom: 3px solid;
     border-color: #19ed28;
     padding-bottom: 5px;
 }
-.activity .headlings a:active {
+.headlings a:active {
     border-bottom: 3px solid;
     border-color: #19ed28;
     padding-bottom: 5px;
 }
-.activity .headlings .btn {
+.headlings .btn {
     background: #34af6d;
     padding: 8px 15px;
     border: none;
@@ -432,7 +432,27 @@ nav.close ~ .dashboard .top {
     margin-left: 60em;
     cursor: pointer;
 }
-.activity .headlings .btn i {
+.headlings .btn i {
+    font-style: normal;
+    color: white;
+}
+
+/* Asset adding */
+.headlings1 {
+    margin-top: -60px;
+    padding-left: 90px;
+    margin-bottom: 40px;
+}
+
+.headlings1 .btn {
+    background: #34af6d;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 60em;
+    cursor: pointer;
+}
+.headlings1 .btn i {
     font-style: normal;
     color: white;
 }
@@ -578,13 +598,14 @@ table thead tr {
     border: 1px solid #4ad489;
 }
 .wrapper .form .inputfield .imp {
-    background-color: indigo;
+    background-color: #ffffff;
     width: 11%;
-    color: white;
+    color: #34af6d;
     padding: 8px 0px;
     font-family: sans-serif;
     font-size: 13px;
-    border: 1px solid indigo;
+    font-weight: 550;
+    border: 1px solid #34af6d;
     border-radius: 14px;
     cursor: pointer;
     margin-left: -35px;

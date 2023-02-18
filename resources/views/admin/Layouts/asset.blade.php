@@ -10,6 +10,10 @@
           <i class="uil uil-tachometer-fast-alt"></i>
           <span class="text"><strong>Assets Management</strong></span>
         </div>
+        
+        <div class="headlings1">
+            <button class="btn" onclick="location.href='{{ url('/admin/asset_form') }}'"><i class="uil uil-plus">Add Category</i></button>
+        </div>
 
         <div class="wrapper1">
             <div class="card" onclick="location.href='{{ url('/admin/asset_form') }}'"> 
