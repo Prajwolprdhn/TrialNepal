@@ -17,7 +17,7 @@
 
         <div class="wrapper1">
             @foreach ($assets as $asset)
-            <div class="card" onclick="location.href='{{ url('/admin/asset_form') }}'"> 
+            <div class="card" onclick="location.href='{{ route('allasset',['category'=>$asset->name])}}'"> 
                 <img src="{{url('/uploads/assets/'. $asset->asset_img)}}">
                 <div class="info" >
                     <h1>{{ $asset->name }}</h1>

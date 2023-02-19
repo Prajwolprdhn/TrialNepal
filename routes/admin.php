@@ -1,11 +1,12 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AssetsController;
+use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Owner\OwnerController;
-use App\Http\Controllers\User\UserController;
-use App\Http\Controllers\AssetsController;
+use App\Http\Controllers\All_AssetController;
 
 
 //Admin
@@ -21,6 +22,16 @@ Route::middleware(['isAdmin'])->group(function () {
     Route::get('asset',[AssetsController::class,'asset'])->name('asset')->middleware('auth');
     Route::get('asset_form',[AssetsController::class,'asset_form'])->name('asset_form')->middleware('auth');
     Route::post('asset_store',[AssetsController::class,'asset_store'])->name('asset_store')->middleware('auth');
+
+    //assets_table
+    Route::get('/asset/{category}',[All_AssetController::class,'asset'])->name('allasset')->middleware('auth');
+
+    //assets_table_add
+    Route::post('/assest/addasset',[All_AssetController::class,'asset_store'])->name('storeasset')->middleware('auth');
+
+
+
+    Route::get('/assest/addasset',[All_AssetController::class,'addasset'])->name('addasset')->middleware('auth');
     
 
     //Create user

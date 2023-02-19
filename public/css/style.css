@@ -457,6 +457,26 @@ nav.close ~ .dashboard .top {
     color: white;
 }
 
+/* Specific asset adding */
+.headlings2 {
+    margin-top: -60px;
+    padding-left: 220px;
+    margin-bottom: 40px;
+}
+
+.headlings2 .btn {
+    background: #34af6d;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 60em;
+    cursor: pointer;
+}
+.headlings2 .btn i {
+    font-style: normal;
+    color: white;
+}
+
 .table {
     border-collapse: collapse;
     margin: 25px 0;
@@ -479,6 +499,12 @@ table thead tr {
 .table tbody tr {
     border-bottom: 1px solid #ddd;
 }
+
+.table tbody tr img {
+    width: 70px;
+    height: 70px;
+}
+
 .table tbody tr:nth-of-type(odd) {
     background: #f3f3f3;
 }
