@@ -438,9 +438,11 @@ nav.close ~ .dashboard .top {
 }
 
 /* Asset adding */
+/* .headless .btn {
+    display: inline-block;
+} */
 .headlings1 {
-    margin-top: -60px;
-    padding-left: 90px;
+    margin-top: -78px;
     margin-bottom: 40px;
 }
 
@@ -449,10 +451,47 @@ nav.close ~ .dashboard .top {
     padding: 8px 15px;
     border: none;
     border-radius: 5px;
-    margin-left: 60em;
+    margin-left: 57em;
     cursor: pointer;
 }
 .headlings1 .btn i {
+    font-style: normal;
+    color: white;
+}
+
+.headlings3 {
+    margin-top: -68px;
+    margin-bottom: 40px;
+    margin-left: 70px;
+}
+
+.headlings3 .btn {
+    background: #34af6d;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 65em;
+    cursor: pointer;
+}
+.headlings3 .btn {
+    font-style: normal;
+    color: white;
+}
+
+.headlings4 {
+    margin-top: -68px;
+    margin-bottom: 40px;
+}
+
+.headlings4 .btn {
+    background: #34af6d;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 71em;
+    cursor: pointer;
+}
+.headlings4 .btn i {
     font-style: normal;
     color: white;
 }
@@ -674,7 +713,7 @@ table thead tr {
     width: 22%;
     height: 360px;
     margin-bottom: 40px;
-    margin-right: 20px;
+    margin-right: 36px;
     padding: 2rem 1rem;
     background: #fff;
     position: relative;

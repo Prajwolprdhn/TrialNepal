@@ -23,6 +23,13 @@ Route::middleware(['isAdmin'])->group(function () {
     Route::get('asset_form',[AssetsController::class,'asset_form'])->name('asset_form')->middleware('auth');
     Route::post('asset_store',[AssetsController::class,'asset_store'])->name('asset_store')->middleware('auth');
 
+    //category management
+    Route::get('asset_management',[AssetsController::class,'asset_management'])->name('asset_management')->middleware('auth');
+    
+    //Delete category
+    Route::delete('/asset_management/{asset}',[AssetsController::class,'deletion']);
+
+
     //assets_table
     Route::get('/asset/{category}',[All_AssetController::class,'asset'])->name('allasset')->middleware('auth');
 

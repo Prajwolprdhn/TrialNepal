@@ -17,6 +17,10 @@ class AssetsController extends Controller
     public function asset_form(){
         return view('admin.layouts.asset_form');
     }
+    public function asset_management(){
+        $assets = DB::select('select * from assets');
+        return view('admin.layouts.asset_management',['assets'=>$assets]);
+    }
     public function asset_store(Request $request){
 
         $asset = new Assets;
@@ -30,5 +34,10 @@ class AssetsController extends Controller
         }
         $asset->save();
         return redirect('admin/asset');
+    }
+
+    public function deletion(Assets $asset){
+        $asset->delete();
+        return redirect('admin/asset_management')->with('flash_message', 'Category deleted!'); 
     }
 }
