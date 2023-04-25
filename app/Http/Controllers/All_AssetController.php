@@ -6,6 +6,9 @@ use App\Models\All_Assets;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+
+
 class All_AssetController extends Controller
 {
     public function asset($category){

@@ -21,10 +21,10 @@
                     <label>Email Address</label>
                     <input type="text" class="input" autocomplete="off" name="email" value="{{$user->email}}">
                 </div> 
-                <div class="inputfield">
+                {{-- <div class="inputfield">
                     <label>Password</label>
                     <input type="password" class="input" autocomplete="off" name="password" placeholder="password" value="{{$user->password}}">
-                </div>  
+                </div>   --}}
                 <div class="inputfield">
                     <label>Contact No.</label>
                     <input type="text" class="input" name="contact" placeholder="98-XXXXXXXX" value="{{$user->contact}}">

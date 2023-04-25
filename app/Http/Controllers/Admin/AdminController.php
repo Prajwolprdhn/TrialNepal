@@ -55,18 +55,24 @@ class AdminController extends Controller
         return view('admin.layouts.edit',['user' => $user]);
     }
 
-    public function update(Request $request, User $user){
+    public function update(Request $request, $user){
 
-        $formFields = $request->validate([
-            'name' => 'required',
-            'email' => ['required','email'],
-            'contact' => 'required',
-            'role' => 'required',
-            'password' => 'required|min:5',
-        ]);
-        $formFields['password'] = bcrypt($formFields['password']);
-        
-        $user->update($formFields);
+        // $formFields = $request->validate([
+        //     'name' => 'required',
+        //     'email' => ['required','email'],
+        //     'contact' => 'required',
+        //     'role' => 'required',
+        //     'password' => 'required|min:5',
+        // ]);
+
+        // $request['password'] = bcrypt($request['password']);
+        $user = User::find($user);
+    //    dd($user);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->contact = $request->contact;
+        $user->role = $request->role;
+        $user->update();
 
         return redirect('admin/form');
     }

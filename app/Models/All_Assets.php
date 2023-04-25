@@ -16,4 +16,9 @@ class All_Assets extends Model
         'category',
         'asset_img',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
