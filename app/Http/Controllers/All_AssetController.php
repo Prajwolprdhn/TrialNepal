@@ -20,6 +20,7 @@ class All_AssetController extends Controller
         return view('admin.layouts.addasset',['options' => $options]);
     }
     public function asset_store(Request $request){
+        $user_id = Auth::id();
         $asset = new All_Assets;
         $asset -> name = $request->input('name');
         $asset -> contact = $request->input('contact');
@@ -32,6 +33,7 @@ class All_AssetController extends Controller
             $file->move('uploads/assets/specific_assets',$filename);
             $asset->asset_img = $filename;
         }
+        $asset -> user_id = $user_id;
         $asset->save();
         return redirect('admin/asset');
     }
