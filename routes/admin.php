@@ -29,6 +29,10 @@ Route::middleware(['isAdmin'])->group(function () {
     //Delete category
     Route::delete('/asset_management/{asset}',[AssetsController::class,'deletion']);
 
+    //edit assets
+    Route::get('/asset/edit/{asset_id}',[All_AssetController::class,'assetedit'])->name('assetedit')->middleware('auth');
+    Route::put('/asset/edit/{asset_id}',[All_AssetController::class,'assetupdate'])->name('assetupdate')->middleware('auth');
+
 
     //assets_table
     Route::get('/asset/{category}',[All_AssetController::class,'asset'])->name('allasset')->middleware('auth');

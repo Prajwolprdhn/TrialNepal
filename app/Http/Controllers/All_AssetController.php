@@ -13,6 +13,7 @@ class All_AssetController extends Controller
 {
     public function asset($category){
         $clickValue = DB::select('select * from all_assets where category = ?',[$category]);
+        
         return view('admin.layouts.asset_list',['clickValue' => $clickValue]);
     }
     public function addasset(){
@@ -35,6 +36,22 @@ class All_AssetController extends Controller
         }
         $asset -> user_id = $user_id;
         $asset->save();
+        return redirect('admin/asset');
+    }
+
+    public function assetedit($asset_id){
+        $asset = DB::select('select * from all_assets where id = ?',[$asset_id]);
+        return view('admin.layouts.asset_edit',['asset' => $asset]);
+    }
+    public function assetupdate(Request $request, $asset_id){
+
+        $asset = All_Asset::find($asset_id);
+    //    dd($user);
+        $asset->name = $request->name;
+        $asset->location = $request->location;
+        $asset->contact = $request->contact;
+        $asset->update();
+
         return redirect('admin/asset');
     }
 

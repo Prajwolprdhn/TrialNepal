@@ -39,7 +39,7 @@
               <td>{{ $asset->contact }}</td>
               <td>{{ $asset->location }}</td>
               <td><img src="{{url('/uploads/assets/specific_assets/'. $asset->asset_img)}}"></td>
-              <form action="/admin/form/edit/{{$asset->id}}" method="get">
+              <form action="{{ route('assetedit',['asset_id'=>$asset->id])}}" method="get">
                 @csrf
               <td><button id="green">Edit</button></td>
               </form>

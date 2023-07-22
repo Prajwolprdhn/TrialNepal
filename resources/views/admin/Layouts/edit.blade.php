@@ -40,26 +40,6 @@
                         </select>
                     </div>
                 </div> 
-                {{-- <div class="inputfield">
-                    <label>Status</label>
-                        <input type="radio" id="html" name="fav_language" value="HTML">
-                      <label for="html">Active</label><br>
-                      <input type="radio" id="css" name="fav_language" value="CSS">
-                      <label for="css">Inactive</label><br>
-                </div>  --}}
-                {{-- <div class="inputfield">
-                    <label>Upload Image</label>
-                    <input type="file" id="actual-btn" hidden>
-                    <label class="imp" for="actual-btn">Select Image</label>
-                </div>   --}}
-                
-                <!--<div class="inputfield terms">
-                    <label class="check">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <p>Agreed to terms and conditions</p>
-                </div> -->
                 <div class="inputfield">
                     <input type="submit" class="btn1" value="Update">
                     <a href="{{route('form')}}">Cancel</a>
